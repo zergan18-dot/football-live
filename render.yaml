@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: football-live
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: API_FOOTBALL_KEY
+        sync: false
